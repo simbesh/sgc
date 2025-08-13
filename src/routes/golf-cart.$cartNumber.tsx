@@ -81,7 +81,8 @@ function PostComponent() {
               const time = `${hour === 12 ? 12 : hour % 12}:00 ${hour < 12 ? "AM" : "PM"}`;
               return (
                 <Link
-                  to={`/golf-cart-completed/${data.firstName}`}
+                  to="/golf-cart-completed/$firstName"
+                  params={{ firstName: data.firstName }}
                   key={i}
                   type="button"
                   className={`py-2 px-4 text-white text-center rounded transition-colors ${
